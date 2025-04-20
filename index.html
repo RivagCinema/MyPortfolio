@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио Ривага</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-white shadow p-6 flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Риваг</h1>
+    <nav class="space-x-4">
+      <a href="#about" class="hover:text-blue-600">Обо мне</a>
+      <a href="#projects" class="hover:text-blue-600">Проекты</a>
+      <a href="#contact" class="hover:text-blue-600">Контакты</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-20 bg-blue-50">
+    <h2 class="text-4xl font-bold mb-4">Привет, я Риваг 👋</h2>
+    <p class="text-lg mb-6">Я начинающий разработчик(Вообщем любитель) Roblox-игр а также не менее хороший создатель дискорд серверов</p>
+    <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition">Связаться со мной</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 px-6 max-w-4xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-4">Обо мне</h3>
+    <p>Я учусь в школе, увлекаюсь Roblox Studio, делаю крутые проекты и постоянно учусь чему-то новому. Люблю программировать и развивать креативные идеи.</p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="bg-white py-16 px-6 max-w-6xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-8 text-center">Мои проекты</h3>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-gray-100 p-4 rounded shadow">
+        <h4 class="font-bold text-xl mb-2">Tower Defense Roblox</h4>
+        <p>Моя собственная игра Tower Defense с волнами зомби, башнями и боссами.</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded shadow">
+        <h4 class="font-bold text-xl mb-2">Dead Rails</h4>
+        <p>Деад рейлс думаю знаете такой режим(еще в разработке делается для видео в ютубе)</p>
+      </div>
+      <div class="bg-gray-100 p-4 rounded shadow">
+        <h4 class="font-bold text-xl mb-2">Placement System</h4>
+        <p>Режим где можно строит(Еще в разработке)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6 max-w-xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-6 text-center">Связаться со мной</h3>
+    <form class="space-y-4">
+      <input type="text" placeholder="Имя" class="w-full border p-2 rounded" required />
+      <input type="email" placeholder="Email" class="w-full border p-2 rounded" required />
+      <textarea placeholder="Сообщение" rows="4" class="w-full border p-2 rounded" required></textarea>
+      <button type="submit" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Отправить</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-6">
+    &copy; 2025 Риваг. Все права защищены.
+  </footer>
+</body>
+</html>

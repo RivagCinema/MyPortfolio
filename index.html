@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Портфолио Ривага</title>
+  <title data-ru="Портфолио Ривага" data-en="Rivag's Portfolio">Портфолио Ривага</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     html {
@@ -25,11 +25,12 @@
 <body class="bg-gray-900 text-white transition duration-500">
   <!-- Header -->
   <header class="bg-gray-900 shadow p-6 flex justify-between items-center relative z-10">
-    <h1 class="text-2xl font-bold">Риваг</h1>
+    <h1 class="text-2xl font-bold" data-ru="Риваг" data-en="Rivag">Риваг</h1>
     <nav class="space-x-4">
-      <a href="#about" class="hover:text-blue-400">Обо мне</a>
-      <a href="#projects" class="hover:text-blue-400">Проекты</a>
-      <a href="#contact" class="hover:text-blue-400">Контакты</a>
+      <a href="#about" class="hover:text-blue-400" data-ru="Обо мне" data-en="About">Обо мне</a>
+      <a href="#projects" class="hover:text-blue-400" data-ru="Проекты" data-en="Projects">Проекты</a>
+      <a href="#links" class="hover:text-blue-400" data-ru="Ссылки" data-en="Links">Ссылки</a>
+      <a href="#contact" class="hover:text-blue-400" data-ru="Контакты" data-en="Contact">Контакты</a>
     </nav>
     <div class="ml-4 flex space-x-2">
       <button onclick="setLanguage('ru')" class="px-3 py-1 bg-gray-700 text-white rounded hover:bg-gray-600">RU</button>
@@ -41,7 +42,7 @@
   <section class="text-center py-20 bg-gray-800 fade-in">
     <h2 class="text-4xl font-bold mb-4" data-ru="Привет, я Риваг 👋" data-en="Hi, I'm Rivag 👋">Привет, я Риваг 👋</h2>
     <p class="text-lg mb-6" data-ru="Я начинающий разработчик Roblox-игр и опытный создатель Discord-серверов." data-en="I'm a beginner Roblox game developer and experienced Discord server creator.">Я начинающий разработчик Roblox-игр и опытный создатель Discord-серверов.</p>
-    <a href="#contact" class="bg-white text-black px-6 py-3 rounded hover:bg-gray-300 transition">Связаться со мной</a>
+    <a href="#contact" class="bg-white text-black px-6 py-3 rounded hover:bg-gray-300 transition" data-ru="Связаться со мной" data-en="Contact Me">Связаться со мной</a>
   </section>
 
   <!-- About -->
@@ -73,6 +74,17 @@
     </div>
   </section>
 
+  <!-- Links -->
+  <section id="links" class="py-16 px-6 max-w-4xl mx-auto fade-in">
+    <div class="bg-white text-black p-6 rounded shadow text-center">
+      <h3 class="text-3xl font-semibold mb-4" data-ru="Ссылки" data-en="Links">Ссылки</h3>
+      <div class="space-y-4">
+        <a href="https://discord.gg/2bpPTvPB" target="_blank" class="block bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" data-ru="Мой Discord-сервер" data-en="My Discord Server">Мой Discord-сервер</a>
+        <a href="https://www.youtube.com/@AbsoluteRivag" target="_blank" class="block bg-red-600 text-white py-2 rounded hover:bg-red-700 transition" data-ru="Мой YouTube-канал" data-en="My YouTube Channel">Мой YouTube-канал</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
   <section id="contact" class="py-16 px-6 max-w-xl mx-auto fade-in">
     <div class="bg-white text-black p-6 rounded shadow">
@@ -81,21 +93,24 @@
         <input type="text" placeholder="Имя / Name" class="w-full border p-2 rounded" required />
         <input type="email" placeholder="Email" class="w-full border p-2 rounded" required />
         <textarea placeholder="Сообщение / Message" rows="4" class="w-full border p-2 rounded" required></textarea>
-        <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Отправить</button>
+        <button type="submit" class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition" data-ru="Отправить" data-en="Send">Отправить</button>
       </form>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-sm text-gray-400 py-6 fade-in">
-    &copy; 2025 Риваг. Все права защищены.
+  <footer class="text-center text-sm text-gray-400 py-6 fade-in" data-ru="© 2025 Риваг. Все права защищены." data-en="© 2025 Rivag. All rights reserved.">
+    © 2025 Риваг. Все права защищены.
   </footer>
 
   <!-- Language Switch Script -->
   <script>
     function setLanguage(lang) {
+      document.documentElement.lang = lang;
       document.querySelectorAll('[data-ru]').forEach(el => {
-        el.textContent = el.getAttribute(`data-${lang}`);
+        if (el.hasAttribute(`data-${lang}`)) {
+          el.textContent = el.getAttribute(`data-${lang}`);
+        }
       });
     }
   </script>
